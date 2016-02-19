@@ -1,0 +1,121 @@
+
+nav {
+	width: 100%;
+	top: 0;
+	left: 0;
+	text-align: right;
+	position: fixed;
+}
+
+nav a {
+	text-decoration: none;
+	font-family: 'Erica One', cursive;
+	color: orange;
+}
+
+nav > ul > li {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+.current {
+	text-decoration: underline;
+}
+
+#landingpage {
+	text-align: left;
+	background-color: black;
+	height: 800px;
+	margin-top: 75px;
+	width: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#sitename {
+	font-family: 'Erica One', cursive;
+	font-size: 80px;
+	color: white;
+	height: 50px;
+	margin-left: 10px;
+}
+
+body {
+	margin: 15px;
+}
+
+h3 {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 1.25em;
+	color: pink;
+	margin-left: 10px;
+	height: 20px;
+}
+
+p {
+	font-family: 'Erica One', cursive;
+	font-size: 1.5em;
+}
+
+#home {			
+	background-image: url(IMG/aboutimg.jpg)
+}
+
+#gowanus {
+	background-image: url(IMG/gowanus.jpg)
+}
+
+#boerumhill {
+	background-image: url(IMG/boerumhill.jpg)
+}
+
+#redhook {
+	background-image: url(IMG/redhook.jpg)
+}
+
+#bedstuy {
+	background-image: url(IMG/bedstuy.jpg)
+}
+
+#dumbo {
+	background-image: url(IMG/dumbo.jpg)
+}
+
+.welcome {
+	margin-left: 10px;
+}
+
+#connect {
+	height: 1200px;
+	margin-top: 20px;
+	background-color: lightblue;
+	font-size: 1.5em;
+}
+
+.fb, .twitter {
+	height: 75px;
+}
+
+section {
+	height: 1400px;
+	background-size: cover;
+	background-attachment: fixed;
+	margin-top: -55px;
+	padding-top: 30px;
+	font-size: 1.5em;
+}
+
+.button {
+	top: 50%;
+	position: absolute;
+	height: 200px;
+	font-size: 3em;
+	text-align: center;
+	/*
+	width: 100%;
+	margin-top: 250px;*/	
+}
+#connect.nth-of-type(2) {
+	font-size: 0.5em;
+}
+

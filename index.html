@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Brooklyn Beat.</title>
+	<link rel="stylesheet" href="CSS/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Erica+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,900|Alegreya+Sans:400,900' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<section id="landingpage"><h1 id="sitename">Brooklyn.</h1>
+	<h3>Have you ever stopped to listen?</h3>
+	</section>
+	
+	<nav>			
+		<ul>
+			<li class="current"><a href="#home">About</a></li>	
+			<li><a href="#gowanus">Gowanus</a></li>
+			<li><a href="#boerumhill">Boerum Hill</a></li>
+			<li><a href="#redhook">Red Hook</a></li>
+			<li><a href="#bedstuy">Bed-Stuy</a></li>
+			<li><a href="#dumbo">DUMBO</a></li>
+			<li><a href="#connect">Connect</a></li>
+		</ul>
+	</nav>
+	
+	<section id="home" data-stellar-background-ratio="0.5">
+		<p class="welcome">Welcome to Brooklyn Beat - an audio-visual journey of Brooklyn.<br>Sit back and discover the sounds.
+		</p>
+	</section>
+	
+	<section id="gowanus" data-stellar-background-ratio="0.5">
+		<h3>Gowanus</h3>
+  	  		<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png">
+  	  		</a> 
+	</section>
+
+	<section id="boerumhill" data-stellar-background-ratio="0.5">
+		<h3>Boerum Hill</h3>
+			<a onclick="toggleAudio(this.firstChild)" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png"
+			</a> 
+	</section>
+
+	<section id="redhook" data-stellar-background-ratio="0.5">
+		<h3>Red Hook</h3>
+			<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png">
+			</a> 
+	</section>
+
+	<section id="bedstuy" data-stellar-background-ratio="0.5">
+		<h3>Bed-Stuy</h3>
+			<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png">
+			</a> 
+	</section>
+
+	<section id="dumbo" data-stellar-background-ratio="0.5">
+		<h3>DUMBO</h3>
+			<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png">
+			</a> 
+	</section>
+
+	<div id="connect">
+		<h3>Connect</h3>
+			<p class="lastpage">This is some text blah blah blah
+			</p>
+  	  	<div>
+  	  		<img class="fb" src="IMG/facebookicon.png">
+  	  		<img class= "twitter" src="IMG/twittericon.png">
+  	  	</div>
+	</div>
+
+
+
+
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="JS/jquery.stellar.min.js"></script>
+	<script src="JS/jquery.nav.js"></script>
+
+	<script>
+	$(document).ready(function(){
+
+		$(window).stellar();
+
+		$('nav').onePageNav({
+			scrollThreshold: 0.3,
+		});
+
+		$('h1').hide();
+		$('h1').animate({left: 800, opacity:"show"}, 2000);
+	});
+
+	function toggleAudio(audio) {
+		if(audio.paused) {
+			audio.play(); 
+			$(this).find('img').changeAttr('src').val('IMG/pausebutton.png');
+		}
+		else {
+			audio.pause();
+		}
+	}
+	</script>
+
+</body>
+
+</html>

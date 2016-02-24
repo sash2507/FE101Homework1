@@ -1,0 +1,214 @@
+/*Nav bar styling*/
+nav {
+	width: 100%;
+	top: 0;
+	left: 0;
+	text-align: right;
+	position: fixed;
+}
+
+nav a {
+	text-decoration: none;
+	font-family: 'Erica One', cursive;
+	color: orange;
+}
+
+nav > ul > li {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+.current {
+	text-decoration: underline;
+}
+
+body {
+	margin: 10px;
+}
+
+/*Menu button styling - for nav bar at smaller screen size*/
+#menu-button {
+	display: none;
+	position: fixed;
+	z-index: 1;
+}
+
+/*Landing (home) page styling*/
+#landingpage {
+	text-align: left;
+	background-color: black;
+	height: 800px;
+	margin-top: 75px;
+	width: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#sitename {
+	font-family: 'Erica One', cursive;
+	font-size: 80px;
+	color: white;
+	height: 50px;
+	margin-left: 10px;
+}
+
+.welcome {
+	margin-left: 10px;
+}
+
+h3 {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 1.25em;
+	color: pink;
+	margin-left: 10px;
+	margin-top: 30px;
+	height: 20px;
+}
+
+p {
+	font-family: 'Erica One', cursive;
+	font-size: 1.5em;
+}
+
+/*Styling for all sections except social media page*/
+section {
+	height: 1400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: -45px;
+	padding-top: 15px;
+	font-size: 1.5em;
+}
+
+/*Styling for audio button*/
+.playbutton {
+	height: 40vh;
+	margin-top: 35vh;
+	margin-left: 680px;
+}
+
+#home {			
+	background-image: url("../IMG/aboutimg.jpg");
+	font-size: 2em;
+}
+#gowanus {
+	background-image: url("../IMG/gowanus.jpg");
+}
+#boerumhill {
+	background-image: url("../IMG/boerumhill.jpg");
+}
+#redhook {
+	background-image: url("../IMG/redhook.jpg");
+}
+#bedstuy {
+	background-image: url("../IMG/bedstuy.jpg");
+}
+#dumbo {
+	background-image: url("../IMG/dumbo.jpg");
+}
+
+/*Social media page styling*/
+#why {
+	height: 1200px;
+	background-color: lightblue;
+	font-size: 1.75em;
+	padding-top: 50px;
+} 
+
+#why p, h4 {
+	width: 43%;
+	text-align: justify;
+	font-size: 15px;
+	margin-left: 10px;
+	font-family: 'Erica One', cursive;	
+}
+
+#socialmedia img {
+	height: 50px;
+}
+
+#socialmedia > .fb {
+	margin-left: 10px;
+}
+
+/*Media query for breakpoint at 786px screen size (and below)*/
+@media only screen and (max-width: 768px) {
+	nav ul {
+		display: none;
+	}
+
+	nav > ul > li {
+		display: block;
+	}
+	
+	p {
+		font-family: 'Erica One', cursive;
+		font-size: 0.6em;
+	}
+
+	#menu-button {
+		display: block;
+		left: 50%;
+		top: 10px;
+	}
+
+	#menu-button img {
+		height: 25px;
+	}
+
+	#landingpage {
+		text-align: left;
+		background-color: black;
+		height: 450px;
+		margin-top: 200px;
+		width: 100%;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	h3 {
+		font-size: 2em;
+	}
+
+	section {
+	height: 700px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: -5px;
+	padding-top: 10px;
+	font-size: 0.6em;
+	}
+	
+	p {
+		padding-top: 40px;
+		width: 50%;
+		text-align: justify;
+	}
+	.playbutton {
+	margin-left: 50%;
+	margin-top: 25%;
+	}
+
+	.play {
+		height: 75px;
+	}
+
+	#why {
+		height: 700px;
+		font-size: 0.45em;
+		padding-top: 40px;
+	}
+
+	#why p, h4 {
+		width: 45%;
+	}
+
+	#socialmedia img {
+		height: 30px;
+	}
+	#socialmedia > .fb {
+		margin-left: 10px;
+	}
+}

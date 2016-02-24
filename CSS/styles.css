@@ -1,3 +1,4 @@
+/*Nav bar styling*/
 nav {
 	width: 100%;
 	top: 0;
@@ -21,6 +22,18 @@ nav > ul > li {
 	text-decoration: underline;
 }
 
+body {
+	margin: 10px;
+}
+
+/*Menu button styling - for nav bar at smaller screen size*/
+#menu-button {
+	display: none;
+	position: fixed;
+	z-index: 1;
+}
+
+/*Landing (home) page styling*/
 #landingpage {
 	text-align: left;
 	background-color: black;
@@ -39,8 +52,8 @@ nav > ul > li {
 	margin-left: 10px;
 }
 
-body {
-	margin: 15px;
+.welcome {
+	margin-left: 10px;
 }
 
 h3 {
@@ -48,6 +61,7 @@ h3 {
 	font-size: 1.25em;
 	color: pink;
 	margin-left: 10px;
+	margin-top: 30px;
 	height: 20px;
 }
 
@@ -56,47 +70,145 @@ p {
 	font-size: 1.5em;
 }
 
-.welcome {
-	margin-left: 10px;
-}
-
+/*Styling for all sections except social media page*/
 section {
 	height: 1400px;
 	background-size: cover;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
-	margin-top: -55px;
-	padding-top: 30px;
+	margin-top: -45px;
+	padding-top: 15px;
 	font-size: 1.5em;
 }
 
-/*.wrapper {
-    padding: 10px;
-}*/
-.button {
-	width: 100%;
-	float: left;
-	margin-top: 250px;
-	font-size: 3em;
-	text-align: center;
-	color: orange;
-/*	position: relative;*/
+/*Styling for audio button*/
+.playbutton {
+	height: 40vh;
+	margin-top: 35vh;
+	margin-left: 680px;
 }
 
-.winter {			
-	background-image: url(homepageimg.jpg)
+#home {			
+	background-image: url("../IMG/aboutimg.jpg");
+	font-size: 2em;
 }
-.spring {
-	background-image: url(gowanus.jpg)
+#gowanus {
+	background-image: url("../IMG/gowanus.jpg");
 }
-.summer {
-	background-image: url(boerumhill.jpg)
+#boerumhill {
+	background-image: url("../IMG/boerumhill.jpg");
 }
-.autumn {
-	background-image: url(redhook.jpg)
+#redhook {
+	background-image: url("../IMG/redhook.jpg");
 }
-.bedstuy {
-	background-image: url(bedstuy.jpg)
+#bedstuy {
+	background-image: url("../IMG/bedstuy.jpg");
 }
 #dumbo {
-	background-image: url(dumbo.jpg)
+	background-image: url("../IMG/dumbo.jpg");
+}
+
+/*Social media page styling*/
+#why {
+	height: 1200px;
+	background-color: lightblue;
+	font-size: 1.75em;
+	padding-top: 50px;
+} 
+
+#why p, h4 {
+	width: 43%;
+	text-align: justify;
+	font-size: 15px;
+	margin-left: 10px;
+	font-family: 'Erica One', cursive;	
+}
+
+#socialmedia img {
+	height: 50px;
+}
+
+#socialmedia > .fb {
+	margin-left: 10px;
+}
+
+/*Media query for breakpoint at 786px screen size (and below)*/
+@media only screen and (max-width: 768px) {
+	nav ul {
+		display: none;
+	}
+
+	nav > ul > li {
+		display: block;
+	}
+	
+	p {
+		font-family: 'Erica One', cursive;
+		font-size: 0.6em;
+	}
+
+	#menu-button {
+		display: block;
+		left: 50%;
+		top: 10px;
+	}
+
+	#menu-button img {
+		height: 25px;
+	}
+
+	#landingpage {
+		text-align: left;
+		background-color: black;
+		height: 450px;
+		margin-top: 200px;
+		width: 100%;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	h3 {
+		font-size: 2em;
+	}
+
+	section {
+	height: 700px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: -5px;
+	padding-top: 10px;
+	font-size: 0.6em;
+	}
+	
+	p {
+		padding-top: 40px;
+		width: 50%;
+		text-align: justify;
+	}
+	.playbutton {
+	margin-left: 50%;
+	margin-top: 25%;
+	}
+
+	.play {
+		height: 75px;
+	}
+
+	#why {
+		height: 700px;
+		font-size: 0.45em;
+		padding-top: 40px;
+	}
+
+	#why p, h4 {
+		width: 45%;
+	}
+
+	#socialmedia img {
+		height: 30px;
+	}
+	#socialmedia > .fb {
+		margin-left: 10px;
+	}
 }

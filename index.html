@@ -1,106 +1,145 @@
+<!-- Please note: 
+The audio files are samples only and the pause functionality of audio tag does not yet work :( 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Brooklyn Beat.</title>
 	<link rel="stylesheet" href="CSS/styles.css">
+	<link rel="stylesheet" href="CSS/animate.css">
 	<link href='https://fonts.googleapis.com/css?family=Erica+One' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,900|Alegreya+Sans:400,900' rel='stylesheet' type='text/css'>
 
 </head>
 
 <body>
-	<section id="landingpage"><h1 id="sitename">Brooklyn.</h1>
-	<h3>Have you ever stopped to listen?</h3>
+	<button id="menu-button"><img src="IMG/menubuttonicon.png"></button>
+	
+	<section id="landingpage">
+		<h1 id="sitename">Brooklyn.</h1>
+		<h3 class="h3 animated bounce">Have you ever stopped to listen?</h3>
 	</section>
 	
 	<nav>			
 		<ul>
-			<li class="current"><a href="#home">About</a></li>	
+			<li class="current"><a href="#home">About</a></li>
 			<li><a href="#gowanus">Gowanus</a></li>
 			<li><a href="#boerumhill">Boerum Hill</a></li>
 			<li><a href="#redhook">Red Hook</a></li>
 			<li><a href="#bedstuy">Bed-Stuy</a></li>
 			<li><a href="#dumbo">DUMBO</a></li>
-			<li><a href="#connect">Connect</a></li>
+			<li><a href="#why">Why?</a></li>
 		</ul>
 	</nav>
 	
 	<section id="home" data-stellar-background-ratio="0.5">
-		<p class="welcome">Welcome to Brooklyn Beat - an audio-visual journey of Brooklyn.<br>Sit back and discover the sounds.
+		<p class="welcome">Welcome to Brooklyn Beat - an audio-visual journey of Brooklyn. Sit back and discover the sounds.
 		</p>
 	</section>
-	
+
 	<section id="gowanus" data-stellar-background-ratio="0.5">
 		<h3>Gowanus</h3>
-  	  		<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png">
-  	  		</a> 
+  	  		<div class="playbutton">
+  	  			<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+				</a>
+  	  		</div>
 	</section>
 
 	<section id="boerumhill" data-stellar-background-ratio="0.5">
 		<h3>Boerum Hill</h3>
-			<a onclick="toggleAudio(this.firstChild)" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png"
-			</a> 
+			<div class="playbutton">
+				<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+				</a> 
+			</div>
 	</section>
 
 	<section id="redhook" data-stellar-background-ratio="0.5">
 		<h3>Red Hook</h3>
-			<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png">
-			</a> 
+			<div class="playbutton">
+				<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+				</a>
+			</div> 
 	</section>
 
 	<section id="bedstuy" data-stellar-background-ratio="0.5">
 		<h3>Bed-Stuy</h3>
-			<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png">
-			</a> 
+			<div class="playbutton">
+				<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+				</a>
+			</div> 
 	</section>
 
 	<section id="dumbo" data-stellar-background-ratio="0.5">
 		<h3>DUMBO</h3>
-			<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img src="IMG/playbutton.png">
-			</a> 
+			<div class="playbutton">
+				<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+				</a> 
+			</div>
 	</section>
 
-	<div id="connect">
-		<h3>Connect</h3>
-			<p class="lastpage">This is some text blah blah blah
-			</p>
-  	  	<div>
-  	  		<img class="fb" src="IMG/facebookicon.png">
-  	  		<img class= "twitter" src="IMG/twittericon.png">
-  	  	</div>
+	<div id="why">
+		<p class="lastpage">Sounds, which we often think of as noise, are an integral part of the identity of place.<br><br>This project lets me experience that which is routine and ordinary in a non-routine way. The few days spent recording have created a heightened sense of awareness - and a sense of place - through sounds of the cityscape.
+		</p>
+  	  	
+  	  <div id="socialmedia">
+  	  	<h4>Please spread the word!</h4>
+
+  	 	<a class="fb" href="https://www.facebook.com" target="blank"><img src="IMG/facebookicon.png"></a>
+
+  	  	<a href="https://twitter.com" target="blank"><img src="IMG/twittericon.png"></a>
+  	  </div>
+	
 	</div>
 
-
-
-
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="JS/jquery.stellar.min.js"></script>
+		
 	<script src="JS/jquery.nav.js"></script>
 
 	<script>
+
 	$(document).ready(function(){
 
-		$(window).stellar();
-
-		$('nav').onePageNav({
+		// $(window).stellar(); 
+		//Scrolling plugin
+		$('nav').onePageNav({  
 			scrollThreshold: 0.3,
 		});
-
-		$('h1').hide();
+		
+		//Animation for h1 tag on homepage
+		$('h1').hide(); 
 		$('h1').animate({left: 800, opacity:"show"}, 2000);
 	});
 
-	function toggleAudio(audio) {
-		if(audio.paused) {
-			audio.play(); 
-			$(this).find('img').changeAttr('src').val('IMG/pausebutton.png');
+		//Enables toggling of nav
+		function toggleNav() { 
+			$('nav ul').slideToggle();
 		}
-		else {
-			audio.pause();
+			$('#menu-button').click(toggleNav);
+
+		//Removes default styling of nav ul (display: none) at 768px screen size
+		function windowResized () { 
+			var width = $(window).width(); 
+			var menu = $('nav ul'); 
+			if(width > 768 && menu.is(':hidden')) {
+				menu.removeAttr('style'); 
+				} 
+			}
+
+		// The function toggleAudio does not work. It controls the play/pause feature of audio tag and changes image upon click.
+
+		function toggleAudio(audio) {
+			if(audio.pause) {
+				audio.play();
+				// $(this).find('img').changeAttr('src', 'IMG/pausebutton.png')
+			}					
+			else {
+				audio.pause();
+			}
 		}
-	}
+
 	</script>
 
 </body>

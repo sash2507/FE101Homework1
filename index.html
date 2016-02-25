@@ -1,6 +1,3 @@
-<!-- Please note: 
-The audio files are samples only and the pause functionality of audio tag does not yet work :( 
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,7 +108,6 @@ The audio files are samples only and the pause functionality of audio tag does n
 
 	$(document).ready(function(){
 
-		// $(window).stellar(); 
 		//Scrolling plugin
 		$('nav').onePageNav({  
 			scrollThreshold: 0.3,
@@ -137,7 +133,8 @@ The audio files are samples only and the pause functionality of audio tag does n
 				} 
 			}
 
-		// This controls the play/pause feature of audio tag 
+		// This controls the play/pause feature of audio tag
+		// IMG controller needs to be added 
 		$(".playbutton").click(function() {
 			$audio = $(this).find("audio");
 

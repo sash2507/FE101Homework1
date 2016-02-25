@@ -41,7 +41,10 @@ The audio files are samples only and the pause functionality of audio tag does n
 	<section id="gowanus" data-stellar-background-ratio="0.5">
 		<h3>Gowanus</h3>
   	  		<div class="playbutton">
-  	  			<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+  	  			<a class="button">
+  	  				<audio src="AUD/nycdasounds.mp3">
+  	  				</audio>
+  	  					<img class="play" src="IMG/playbutton.png">
 				</a>
   	  		</div>
 	</section>
@@ -49,7 +52,9 @@ The audio files are samples only and the pause functionality of audio tag does n
 	<section id="boerumhill" data-stellar-background-ratio="0.5">
 		<h3>Boerum Hill</h3>
 			<div class="playbutton">
-				<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+				<a class="button">
+					<audio src="AUD/nycdasounds.mp3"></audio>
+						<img class="play" src="IMG/playbutton.png">
 				</a> 
 			</div>
 	</section>
@@ -57,7 +62,9 @@ The audio files are samples only and the pause functionality of audio tag does n
 	<section id="redhook" data-stellar-background-ratio="0.5">
 		<h3>Red Hook</h3>
 			<div class="playbutton">
-				<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+				<a class="button">
+					<audio src="AUD/nycdasounds.mp3"></audio>
+						<img class="play" src="IMG/playbutton.png">
 				</a>
 			</div> 
 	</section>
@@ -65,7 +72,9 @@ The audio files are samples only and the pause functionality of audio tag does n
 	<section id="bedstuy" data-stellar-background-ratio="0.5">
 		<h3>Bed-Stuy</h3>
 			<div class="playbutton">
-				<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+				<a class="button">
+					<audio src="AUD/nycdasounds.mp3"></audio>
+						<img class="play" src="IMG/playbutton.png">
 				</a>
 			</div> 
 	</section>
@@ -73,7 +82,9 @@ The audio files are samples only and the pause functionality of audio tag does n
 	<section id="dumbo" data-stellar-background-ratio="0.5">
 		<h3>DUMBO</h3>
 			<div class="playbutton">
-				<a onclick="this.firstChild.play()" class="button"><audio src="AUD/nycdasounds.mp3"></audio><img class="play" src="IMG/playbutton.png">
+				<a class="button">
+					<audio src="AUD/nycdasounds.mp3"></audio>
+						<img class="play" src="IMG/playbutton.png">
 				</a> 
 			</div>
 	</section>
@@ -84,10 +95,8 @@ The audio files are samples only and the pause functionality of audio tag does n
   	  	
   	  <div id="socialmedia">
   	  	<h4>Please spread the word!</h4>
-
-  	 	<a class="fb" href="https://www.facebook.com" target="blank"><img src="IMG/facebookicon.png"></a>
-
-  	  	<a href="https://twitter.com" target="blank"><img src="IMG/twittericon.png"></a>
+  	 		<a class="fb" href="https://www.facebook.com" target="blank"><img src="IMG/facebookicon.png"></a>
+  	  		<a href="https://twitter.com" target="blank"><img src="IMG/twittericon.png"></a>
   	  </div>
 	
 	</div>
@@ -128,17 +137,17 @@ The audio files are samples only and the pause functionality of audio tag does n
 				} 
 			}
 
-		// The function toggleAudio does not work. It controls the play/pause feature of audio tag and changes image upon click.
+		// This controls the play/pause feature of audio tag 
+		$(".playbutton").click(function() {
+			$audio = $(this).find("audio");
 
-		function toggleAudio(audio) {
-			if(audio.pause) {
-				audio.play();
-				// $(this).find('img').changeAttr('src', 'IMG/pausebutton.png')
-			}					
-			else {
-				audio.pause();
-			}
-		}
+				if ($audio.prop("paused")) {
+						$audio.trigger("play");
+					}					
+				else {
+					$audio.trigger("pause");
+					}
+				});
 
 	</script>
 
